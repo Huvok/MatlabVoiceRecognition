@@ -30,19 +30,20 @@ code = {8};
 
 % For making Choice
 ch=0;
-poss=5;
+poss=4;
 while ch~=poss
 
-    ch=menu('Speaker Recognition System','1: Human speaker recognition',...
-        '2: Technical data of samples',...
-        '3: Power Spectrum',...
-        '4: Test with other speech files','5: Exit');
+    ch=menu('Speaker Recognition System',...
+        '1: Technical data of samples',...
+        '2: Power Spectrum',...
+        '3: Test with other speech files',
+        '4: Exit');
     disp('                                                                  ');
     %----------------------------------------------------------------------
 
 
-%% 2: Technical data of samples
-    if ch==2
+%% 1: Technical data of samples
+    if ch==1
         ch23=0;
         while ch23~=2
             ch23=menu('Select Option','Plot','Exit');
@@ -101,8 +102,8 @@ while ch~=poss
     end
     %----------------------------------------------------------------------
 
-%% 3: linear and logarithmic power spectrum plot
-    if ch==3
+%% 2: linear and logarithmic power spectrum plot
+    if ch==2
         M = 100;
         N = 256;
 
@@ -173,8 +174,8 @@ while ch~=poss
     end
     %----------------------------------------------------------------------
 
-%% 10: Voice Recognition by letting user enter into database and then compare
-    if ch==4
+%% 3: Voice Recognition by letting user enter into database and then compare
+    if ch==3
         chos=0;
         possibility=5;
         while chos~=possibility,
