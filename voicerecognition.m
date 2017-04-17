@@ -13,7 +13,7 @@ clc;
 %                   %Initial variables
 
 %                   %Minimum distance for speech recognition.
-INT_MIN_DISTANCE = 3;
+INT_MIN_DISTANCE = 1;
 
 %                   %Number of users to be stored in the database.
 INT_MAX_USERS = 8;
@@ -27,19 +27,6 @@ fste = {8};
 nbte = {8};
 data = {INT_MAX_USERS, 4};
 code = {8};
-
-for i = 1:8
-
-    % Read audio data from train folder for performing operations
-    charFilename1=strcat('train\s',num2str(i),'.wav');
-    [s1, fs1, nb1]=wavread(charFilename1);
-    str{i} = s1; fstr{i} = fs1; nbtr{i} = nb1;
-
-    % Read audio data from test folder for performing operations
-    charFilename1 = strcat('test\s',num2str(i),'.wav');
-    [charFilename2 fst1 nbt1] = wavread(charFilename1);
-    ste{i} = charFilename2; fste{i} = fst1; nbte{i} = nbt1;
-end
 
 % For making Choice
 ch=0;
